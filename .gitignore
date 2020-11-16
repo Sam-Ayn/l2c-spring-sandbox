@@ -1,0 +1,4 @@
+# Project exclude paths
+/target/
+/.idea/
+/l2c-spring-sandbox.iml
