@@ -23,7 +23,6 @@ public class Customer {
     @CourseCode
     private String courseCode;
 
-
     public String getFirstName() {
         return firstName;
     }

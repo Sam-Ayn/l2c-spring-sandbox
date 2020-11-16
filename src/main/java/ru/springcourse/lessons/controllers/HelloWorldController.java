@@ -12,33 +12,29 @@ import javax.servlet.http.HttpServletRequest;
 public class HelloWorldController {
 
     @RequestMapping("/showForm")
-    public String showform(){
+    public String showform() {
         return "helloworld-form";
     }
 
     @RequestMapping("/processForm")
-    public String processForm(){
+    public String processForm() {
         return "helloworld";
     }
 
     @RequestMapping("/processFormVersion2")
-    public String letsShoutDude(HttpServletRequest request, Model model){
-
+    public String letsShoutDude(HttpServletRequest request, Model model) {
         String name = request.getParameter("studentName");
         name = name.toUpperCase();
         String result = "Yo! " + name;
         model.addAttribute("message", result);
-
         return "helloworld";
     }
 
     @RequestMapping("/processFormVersion3")
-    public String process(@RequestParam("studentName") String name, Model model){
-
+    public String process(@RequestParam("studentName") String name, Model model) {
         name = name.toUpperCase();
         String result = "Hello from version 3! " + name;
         model.addAttribute("message", result);
-
         return "helloworld";
     }
 }
