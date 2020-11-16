@@ -2,6 +2,8 @@
 <html>
 <body>
 <h2>Spring Mvc Demo</h2>
-<a href="/hello/showForm">Hello World Form</a>
+<a href="${pageContext.request.contextPath}/hello/showForm">Hello World Form</a>
+<br>
+<a href="${pageContext.request.contextPath}/student/showForm">Student form</a>
 </body>
 </html>
